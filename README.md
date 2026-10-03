@@ -76,34 +76,49 @@ The groups are balanced on ARPU, smartphone share and regional distribution (Bei
 ### Sheet "Hidden"
 Found and unhidden the hidden sheet, as the task required.
 
-## Part 3: Novartis Pharma Services AG Test Case
-*Coming soon.*
+## Part 3: Novartis Pharma Services AG Test Case (`Excel_test_case_Novartis_Pharma_Services_AG_.xlsx`)
 
-## Topics Covered
-**Excel Skills**
-- Formulas: `SUMIFS`, `COUNTIF`, `SUMPRODUCT`, `ISOWEEKNUM`, `RAND`, lookups
-- Pivot tables, calculated fields, % of total
-- Slicers (interactive filters)
-- Conditional formatting
-- Text to columns (data structuring)
-- Charts: column, line, doughnut, combo chart with secondary axis
+### Task
+A self-checking Excel test with 24 sequential questions on a telecom call database. Each question unlocks only after the previous one is answered correctly.
 
-**Analytics**
-- Data merging from multiple sources
-- KPI calculation: turnover, turnover per warehouse, share of total
-- Territory ranking (top-N analysis)
-- Weekly trend analysis
-- Customer / subscriber segmentation
-- A/B test design: random sampling, group balance check, ARPU
-- Management reporting and data visualization
+**Status: test passed ("Тест пройден. Поздравляем!")**
 
-## Tools
-Microsoft Excel
+### Data
+`База данных` sheet: 623 calls, 292 unique subscribers, 6 tariff plans
+| Column | Description |
+|---|---|
+| `Абонент` | Subscriber number |
+| `Тарифный план` | Tariff plan (1–6) |
+| `Направление звонка` | Call direction: in-network, other operators, landline, international, other |
+| `Начисления, тенге` | Charges, KZT |
+| `Продолжительность разговора, секунды` | Call duration, seconds |
 
-## Files
-- `Тестирование_Аналитик.xlsx`: Part 1 (sales by territory)
-- `Assignment.xlsx`: Part 2 (Diagrams, Structuring, AB test)
-- `Excel test case Novartis Pharma Services AG.xlsx`: Part 3 *(coming soon)*
+### Questions Covered
+- Totals: charges, call duration (seconds / minutes), number of calls
+- Breakdowns by call direction and tariff plan
+- Averages: cost per minute, duration per call, charges and minutes per subscriber
+- Shares (%): in-network duration, tariff plan 1 charges, tariff plan 2 subscribers
+- Unique counts: subscribers in total, by direction, by tariff plan
+- Lookups and ranking: tariff plan of a given subscriber, top subscriber by charges, 7th place by charges
+- Finding call directions not used on tariff plan 6
 
+### Key Results
+| Metric | Result |
+|---|---|
+| Total charges | 3,899.58 KZT |
+| Total duration | 7,883 sec (131.4 min) |
+| Total calls | 623 |
+| Unique subscribers | 292 |
+| In-network share of duration | 91.55% |
+| Average cost per minute | 29.68 KZT |
+| Average call duration | 13 sec |
+| Average charges per subscriber | 13.35 KZT |
+| Subscriber with the highest charge | 77010000109 |
+| Call directions not used on tariff plan 6 | Landline, Other |
+
+### Solution
+Formulas: `SUM`, `SUMIF`, `SUMIFS`, `COUNTIFS`, `SUMPRODUCT` (unique counts), `ROUND`, `VLOOKUP`, `XLOOKUP`, `INDEX`, and dynamic arrays: `UNIQUE`, `FILTER`, `SORTBY`.
+
+**Note:** the answer sheet is protected. The answer to question 20 (2705 seconds) was entered as text, so the checker marks it wrong. The correct formula-based answer is in cell **D27**, below the table.
 ## Keywords
 `excel` `microsoft-excel` `pivot-tables` `sumifs` `countif` `sumproduct` `slicers` `conditional-formatting` `data-visualization` `charts` `dashboard` `kpi` `data-analysis` `data-cleaning` `data-structuring` `segmentation` `ab-testing` `random-sampling` `sales-analysis` `business-analytics` `management-reporting` `data-analyst` `portfolio-project`

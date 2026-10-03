@@ -1,5 +1,6 @@
 # Excel: Data Analysis Tasks
-![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white) 
+
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=googlesheets&logoColor=white)
  
 A set of practical Excel tasks for a **Data Analyst** role: combining data sources, building **pivot tables**, calculating **KPIs**, preparing **management-ready reports** and **charts**, structuring raw data, and designing **A/B test groups**.
 
